@@ -1,0 +1,205 @@
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 40rem;
+  margin: 7rem auto 0;
+}
+
+/* Header */
+header {
+  text-align: center;
+}
+header nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+header nav > a {
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 0.5rem 2rem;
+  color: black;
+}
+header nav > .header-active {
+  background: black;
+  color: white;
+}
+/* Header */
+.head1 {
+  text-align: center;
+  margin: 2rem auto 0;
+}
+head1 nav {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+ a {
+  text-decoration: none;
+}
+
+head1 nav > a {
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 0.5rem 2rem;
+  color: black;
+}
+head1 nav > .header-active {
+  background: black;
+  color: white;
+}
+
+/* AddForm */
+.form {
+  margin: 2rem auto;
+  max-width: 20rem;
+}
+.inputField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.inputField input {
+  padding: 0.5rem 1rem 0.5rem 0;
+  text-indent: 0.5rem;
+}
+.form .btnForm {
+  background: #dddddd;
+  border: 1px solid gray;
+  color: dimgray;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.form .btnForm:disabled:hover {
+  background: lightgray ;
+  border: 1px solid #ddd;
+  cursor: default;
+  color: white;
+}
+.form .btnForm:disabled {
+  background: lightgray;
+  border: 1px solid #ddd;
+  cursor: default;
+  color: white;
+}
+
+.form .btnForm:hover {
+/*.button:hover {*/
+  border: 1px solid dimgray;
+  background-color: lightgray;
+  color: black;
+}
+
+/* List Book */
+.listBook {
+  margin: 0.5rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.listBook .noData {
+  text-align: center;
+  grid-column: 1 / span 3;
+  margin-top: 2rem;
+  color: #333;
+}
+
+/* CardHeader */
+.selectBox{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  text-align: right;
+  with: 100%;
+
+}
+.rc-menu-item {
+  /*text-align: justify;*/
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid lightgray ;
+  background: #ffffff;
+  /*cursor: pointer;*/
+}
+
+.rc-menu-item-active{
+  text:bold;
+  text-align: start;
+  transform: translateX(0.05em);
+  transition: transform .7s ease;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid gray;
+  cursor: pointer;
+}
+
+/* Card */
+.book {
+  text-decoration: none;
+  background: #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.book h2 {
+  text-decoration: none;
+}
+.book .bookDetail {
+  text-decoration: none;
+  line-height: 25px;
+  margin-top: 0.5rem;
+}
+.book .buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.book .buttons > button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/*-----------------------*/
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+          to bottom,
+          transparent,
+          rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
+}
